@@ -14,8 +14,8 @@ Showcasing:
 - **CI/CD:** GitHub Actions  
 - **Cloud Hosting:** Azure Static Web Apps (Free Tier)  
 
-## ⚡ How to Run Locally
-```bash
+## How to Run Locally
+in bash terminal:
 npm install
 ng serve
 open http://localhost:4200
