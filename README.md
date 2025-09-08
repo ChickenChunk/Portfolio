@@ -16,6 +16,6 @@ Showcasing:
 
 ## How to Run Locally
 in bash terminal:
-npm install
-ng serve
-open http://localhost:4200
+- npm install
+- ng serve
+- open http://localhost:4200
