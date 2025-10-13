@@ -1,6 +1,6 @@
 # MyPortfolioAngular
 
-[Click me to visit the live site](https://happy-ocean-047756110.1.azurestaticapps.net/)
+[Click me to visit the live site](https://purple-grass-01920b010.1.azurestaticapps.net/)
 
 This is my personal portfolio built with **Angular** and deployed using **GitHub Actions** + **Azure Static Web Apps**.
 
