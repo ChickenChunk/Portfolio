@@ -1,6 +1,14 @@
 # MyPortfolioAngular
+### 🌐 [[Live Site](https://happy-grass-0838a111e.1.azurestaticapps.net/)] (Azure Static Web Apps)
+- **URL**: [Your Azure Static Web Apps URL]
+- **Features**: Global CDN, automatic HTTPS, GitHub integration
+- **Build**: Automated via GitHub Actions
 
-[[Click me to visit the live site](https://purple-grass-01920b010.1.azurestaticapps.net/)]
+### 🐳 Docker Alternative
+- **Purpose**: Demonstrates containerization skills
+- **Build**: `docker build -t portfolio .`
+- **Run**: `docker run -p 8080:80 portfolio`
+- **Features**: Multi-stage build, nginx serving, production-ready
 
 This is my personal portfolio built with **Angular** and deployed using **GitHub Actions** + **Azure Static Web Apps**.
 
