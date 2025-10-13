@@ -2,43 +2,28 @@ name: Azure Static Web Apps CI/CD
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+    branches: [main]
+
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
-  build_and_deploy:
+  build_and_deploy_job:
     runs-on: ubuntu-latest
-    name: Build and Deploy Angular App
+    name: Build and Deploy Job
     steps:
-      # Checkout code
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # Use Node 20
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: '20.19.0'
+          submodules: true
+          lfs: false
 
-      # Install dependencies
-      - name: Install dependencies
-        run: npm ci
-
-      # Build Angular app
-      - name: Build Angular App
-        run: npm run build -- --configuration production
-
-      # Deploy to Azure Static Web Apps
-      - name: Deploy to Azure Static Web Apps
+      - name: Build And Deploy
+        id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_GRASS_0838A111E }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/"
+          app_location: "/" 
           output_location: "dist/Chase-Allison-Portfolio/browser"
-          skip_app_build: true
-
