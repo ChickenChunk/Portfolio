@@ -1,0 +1,21 @@
+.card-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgb(77, 73, 73, 0.25);
+    color: #0957f1;
+    background: transparent;
+    text-decoration: none;
+  }
+  
+:host { display: block; }
+.card { width: 100%; border: 2px solid rgb(0, 0, 0);}
+
+  .btn-sm { padding: 6px 10px; font-size: 14px; }
