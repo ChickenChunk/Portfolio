@@ -44,8 +44,9 @@
 .resume-cta { text-align: center; margin: 0 0 16px 0; }
 
 .docker-cta { text-align: center; margin: 16px 0; }
+.docker-head { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.docker-logo { width: 28px; height: 28px; object-fit: contain; }
 .docker-cta pre { background: rgba(2,6,23,0.5); padding: 12px; border-radius: 8px; overflow: auto; }
-
 #info > .section-inner > h2 { text-align: center; margin: 0 0 12px 0; }
 #info .grid {
   display: flex;
