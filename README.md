@@ -5,7 +5,7 @@
 - **Build**: Automated via GitHub Actions
 
 ### 🐳 Docker Alternative
-- **Purpose**: Demonstrates containerization skills
+- **Link**: [Docker Image](https://hub.docker.com/r/chickenchunk/portfolio-app)
 - **Build**: `docker build -t portfolio .`
 - **Run**: `docker run -p 8080:80 portfolio`
 - **Features**: Multi-stage build, nginx serving, production-ready
