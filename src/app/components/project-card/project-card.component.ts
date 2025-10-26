@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NgIf } from '@angular/common';
-import { Project } from '../models/project';
+import { Project } from '../../models/project';
 
 @Component({
   selector: 'app-project-card',
@@ -8,7 +7,9 @@ import { Project } from '../models/project';
   template: `
     <article class="card">
       <div class="card-body">
-        <h3>{{ project.title }}</h3>
+        <h3 class="title"> {{ project.title }} 
+        <img class="icon-inline" [src]="project.iconSrc" alt="" loading="lazy" decoding="async" />
+        </h3>
         <p>{{ project.summary }}</p>
         <p class="meta">{{ project.stack.join(', ') }}</p>
       </div>
@@ -18,6 +19,9 @@ import { Project } from '../models/project';
         }
         @if (project.repoUrl) {
           <a class="btn btn-sm" [href]="project.repoUrl" target="_blank" rel="noopener">Code</a>
+        }
+          @if (project.imageUrl) {
+          <a class="btn btn-sm" [href]="project.repoUrl" target="_blank" rel="noopener">Docker Image</a>
         }
       </div>
     </article>

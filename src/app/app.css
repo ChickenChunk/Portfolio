@@ -4,6 +4,29 @@
   margin: 0 auto;
   text-align: center;
 }
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Avatar sizing */
+.hero-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Keep the text left-aligned while the whole block remains centered */
+.hero-text { text-align: left; }
+
+/* Mobile: stack and center */
+@media (max-width: 650px) {
+  .hero { flex-direction: column; }
+  .hero-text { text-align: center; }
+  .hero-avatar { width: 84px; height: 84px; }
+}
 
 .section { margin-top: 32px; padding-inline: 16px; }
 .section-inner {
@@ -18,10 +41,27 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 16px;
 }
+.resume-cta { text-align: center; margin: 0 0 16px 0; }
+
+.docker-cta { text-align: center; margin: 16px 0; }
+.docker-cta pre { background: rgba(2,6,23,0.5); padding: 12px; border-radius: 8px; overflow: auto; }
+
+#info > .section-inner > h2 { text-align: center; margin: 0 0 12px 0; }
+#info .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;   /* center the row of cards */
+  align-items: stretch;
+}
+#info .grid app-info-card {
+  flex: 0 0 480px;           /* fixed column width for perfect centering */
+  max-width: 480px;
+}
 
 #projects > .section-inner > h2 { text-align: center; margin: 0 0 12px 0; }
 #projects .grid {
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   gap: 32px;
   justify-content: center;   /* center the row of cards */

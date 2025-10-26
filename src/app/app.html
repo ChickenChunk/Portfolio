@@ -16,9 +16,9 @@
     --hot-red: oklch(61.42% 0.238 15.34);
     --orange-red: oklch(63.32% 0.24 31.68);
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
+    --gray-900: oklch(96% 0.006 300.98);
+    --gray-700: oklch(80% 0.014 302.71);
+    --gray-400: oklch(70% 0.015 304.04);
 
     --red-to-pink-to-purple-vertical-gradient: linear-gradient(
       180deg,
@@ -183,11 +183,40 @@
 </style>
 
 <main class="main">
-  <div>
-    <h1>Chase Allison</h1>
-    <p>I'm a software engineer with a passion for building web applications.</p>
+  <div class="hero">
+    <img class="hero-avatar" src="pfp.jpg" alt="Chase Allison headshot" />
+    <div class="hero-text">
+      <h1>Chase Allison</h1>
+      <p>
+        I'm a results-driven Full-Stack Software Engineer passionate about building scalable, user-focused applications. 
+        I specialize in full-stack development using Next.js, TypeScript, and SQL, working on expanding my skills in 
+        system analysis and deployment tools like Docker and Azure. I'm always looking for new challenges and opportunities to grow.
+      </p>
+    </div>
   </div>
 </main>
+<div class="resume-cta">
+  <a class="btn btn-sm" href="Chase%20Allison%20-%20Resume.pdf" download="Chase_Allison_Resume.pdf" target="_blank" rel="noopener">
+    Download Current Resume
+  </a>
+</div>
+<div class="docker-cta">
+  <h3>Run this site with Docker</h3>
+  <pre><code>docker run --rm -p 8080:80 chickenchunk/portfolio-app:latest</code></pre>
+  <a class="btn btn-sm" href="https://hub.docker.com/r/chickenchunk/portfolio-app" target="_blank" rel="noopener">
+    View on Docker Hub
+  </a>
+</div>
+<section id="info" class="section">
+  <div class="section-inner">
+    <h2>Info</h2>
+    <div class="grid">
+      @for (i of infolist(); track i.title) {
+        <app-info-card [info]="i"></app-info-card>
+      }
+    </div>
+  </div>
+</section>
 <section id="projects" class="section">
   <div class="section-inner">
     <h2>Featured projects</h2>
