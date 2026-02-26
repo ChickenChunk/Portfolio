@@ -1,7 +1,5 @@
 # MyPortfolioAngular
 ### 🌐 [[Live Site](https://happy-grass-0838a111e.1.azurestaticapps.net/)] (Azure Static Web Apps)
-- **URL**: [Your Azure Static Web Apps URL]
-- **Features**: Global CDN, automatic HTTPS, GitHub integration
 - **Build**: Automated via GitHub Actions
 
 ### 🐳 Docker Alternative
